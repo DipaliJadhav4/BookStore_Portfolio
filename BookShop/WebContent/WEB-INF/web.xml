@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <context-param>
+  		<param-name>DRIVER</param-name>
+  		<param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  
+  <context-param>
+  		<param-name>URL</param-name>
+  		<param-value>jdbc:mysql://localhost:3306/advance_java</param-value>
+  </context-param>
+  
+  <context-param>
+  		<param-name>USER</param-name>
+  		<param-value>dmc</param-value>
+  </context-param>
+  
+  <context-param>
+  		<param-name>PASSWORD</param-name>
+  		<param-value>dmc</param-value>
+  </context-param>
+  
+  
+  <servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>servlets.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>ValidateServlet</servlet-name>
+		<servlet-class>servlets.ValidateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ValidateServlet</servlet-name>
+		<url-pattern>/validate</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>SubjectServlet</servlet-name>
+		<servlet-class>servlets.SubjectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SubjectServlet</servlet-name>
+		<url-pattern>/subject</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BookServlet</servlet-name>
+		<servlet-class>servlets.BookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookServlet</servlet-name>
+		<url-pattern>/book</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CartServlet</servlet-name>
+		<servlet-class>servlets.CartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CartServlet</servlet-name>
+		<url-pattern>/cart</url-pattern>	
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShowCartServlet</servlet-name>
+		<servlet-class>servlets.ShowCartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowCartServlet</servlet-name>
+		<url-pattern>/showcart</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>servlets.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+	
+	<listener>
+	<listener-class>listener.BookShopListener</listener-class>
+	</listener>
+	
+</web-app>
